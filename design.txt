@@ -1,6 +1,14 @@
 project structure:
     --_tests // unit test using gtest framework(setup included in cmake)
     --includes // where all of the code reside
+      --database // simple_kv storage main code
+        --simple_kv_db // root for simple_kv db
+          --header // data structures used in this project
+            --AVL // avl tree implementation
+            --HashTable // hashtable implementation
+          --simple_kv // simple kv main entry
+        --simple_kv_includes // for including simple_kv
+
     --main.cpp // the main entry of the program
     --design.txt // project introduction
     --CMakeLists.txt // cmake for this project

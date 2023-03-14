@@ -58,12 +58,16 @@ ADD_EXECUTABLE(main
     ${SOURCE_FILES}
 )
 
-ADD_EXECUTABLE(instruction
-    _tests/_test_files/instruction.cpp
+
+ADD_EXECUTABLE(test_avl
+    _tests/_test_files/test_avl.cpp
     ${SOURCE_FILES}
 )
 
+ADD_EXECUTABLE(test_chained_hash
+    _tests/_test_files/test_chained_hash.cpp
+    ${SOURCE_FILES}
+)
 
-
-TARGET_LINK_LIBRARIES(instruction gtest)
-
+TARGET_LINK_LIBRARIES(test_avl gtest)
+TARGET_LINK_LIBRARIES(test_chained_hash gtest)
